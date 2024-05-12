@@ -1,0 +1,5 @@
+# Test and Lint Dependency
+pytest
+pytest-cov
+isort
+ruff
