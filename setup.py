@@ -1,7 +1,7 @@
 import logging
 import os
 
-from setuptools import find_packages, setup
+from setuptools import setup
 
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.INFO
@@ -59,15 +59,18 @@ setup(
     description="Authentifield model API provider",
     long_description=read_metadata(),
     long_description_content_type="text/markdown",
-    packages=find_packages(where="src"),
+    packages=[NAMESPACE],
+    package_dir={'':'src'},
     # package_dir={
     #     NAMESPACE: f"src/{NAMESPACE}",
     #     "auto_AD": f"src/{NAMESPACE}/model_template/src/auto_AD",
     #     "model_template": f"src/{NAMESPACE}/model_template/src"
     # },
+    # packages=find_packages(where="src"),
+    license_files=("LICENSE",),
     install_requires=read_requirements(),
     license="unknown",
-    # license_files=("LICENSE",),
+    
     keywords="AI Development",
     classifiers=[
         "Programming Language :: Python :: 3 :: Only",
