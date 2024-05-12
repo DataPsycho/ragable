@@ -7,7 +7,7 @@ logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.INFO
 )
 
-NAMESPACE = "authentifield"
+NAMESPACE = "ragable"
 
 
 def read_requirements() -> list:
@@ -59,20 +59,20 @@ setup(
     description="Authentifield model API provider",
     long_description=read_metadata(),
     long_description_content_type="text/markdown",
-    # packages=find_packages(where="src"),
-    package_dir={
-        NAMESPACE: f"src/{NAMESPACE}",
-        "auto_AD": f"src/{NAMESPACE}/model_template/src/auto_AD",
-        "model_template": f"src/{NAMESPACE}/model_template/src"
-    },
+    packages=find_packages(where="src"),
+    # package_dir={
+    #     NAMESPACE: f"src/{NAMESPACE}",
+    #     "auto_AD": f"src/{NAMESPACE}/model_template/src/auto_AD",
+    #     "model_template": f"src/{NAMESPACE}/model_template/src"
+    # },
     install_requires=read_requirements(),
     license="unknown",
     # license_files=("LICENSE",),
-    keywords="Prediction, Authentifield",
+    keywords="AI Development",
     classifiers=[
         "Programming Language :: Python :: 3 :: Only",
-        "Programming Language :: Python :: 3.7",
-        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.12",
+        "Programming Language :: Python :: 3.11",
         "Development Status :: 4 - Beta",
         "Environment :: Linux, MacOS X",
     ],
