@@ -13,5 +13,8 @@ LLM/AI Development Course
 
 This repository contains meterials and experimens from AI Development Course.
 
-- The Requirement Directory contains the requirements for each build stage.
-- The Pyproject file contains setup for linter and pytest.
+- Pyproject toml contains all the required libraries
+- running `pip install -e .` should install core ragable library and also libraries for frontend
+- The Pyproject file contains setup for linter and pytest
+- All the source code are in src directory
+- Dockerfile contains only Frontend image definitions
