@@ -3,16 +3,11 @@
 # OpenAI Chat completion
 # import os
 # from openai import AsyncClient
-import chainlit as cl  # importing chainlit for our app
-from chainlit.message import Message
 # from chainlit.playground.providers import ChatOpenAI  # importing ChatOpenAI tools
 from dotenv import load_dotenv
+import streamlit as st
 # import asyncio
 
 load_dotenv()
 
-@cl.on_message
-async def main(message: Message):
-   # Your custom logic goes here…
-   # Send a response back to the user
-   await cl.Message(content=message.content).send()
+st.header("Welcome to the app!")

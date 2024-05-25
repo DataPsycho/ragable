@@ -1,4 +1,4 @@
-FROM python:3.12.2
+FROM python:3.12.2-slim
 
 RUN useradd -m -u 1000 user
 
@@ -19,4 +19,4 @@ COPY src/frontend frontend
 COPY chainlit.md .
 EXPOSE 7860
 
-CMD ["chainlit", "run", "frontend/app.py", "--port", "7860"]
+CMD ["streamlit", "run", "frontend/app.py", "--server.port", "7860"]
