@@ -8,7 +8,7 @@ def display_message(msg: str):
     console.print(mk_msg)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     msg = """
 This is markdown hello world.
 - Hello

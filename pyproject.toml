@@ -50,13 +50,8 @@ max-line-length = 120
 count = true
 
 
-#[tool.pytest.ini_options]
-#minversion = "6.0"
-#addopts = "--no-header -ra -v" # -s for pringing in tests
-#testpaths = [
-#    "tests",
-#]
 
+#addopts = "--no-header -ra -v" # -s for pringing in tests
 [tool.pytest.ini_options]
 minversion = "6.0"
 addopts = "--cov --cov-report xml --cov-report term-missing"
@@ -66,7 +61,7 @@ filterwarnings = ["ignore::DeprecationWarning"]
 markers = [
     "integration"
 ]
-norecursedirs = ["src/authentifield/model_template/auto_AD/"]
+norecursedirs = []
 
 [tool.coverage]
     [tool.coverage.run]

@@ -10,8 +10,14 @@ client = AsyncOpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 response = client.chat.completions.create(
     model="gpt-3.5-turbo",
     messages=[
-        {"role": "system", "content": "You are a helpful assistant who always speaks in a pleasant tone!"},
-        {"role": "user", "content": "What is the difference between LangChain and LlamaIndex?"},
+        {
+            "role": "system",
+            "content": "You are a helpful assistant who always speaks in a pleasant tone!",
+        },
+        {
+            "role": "user",
+            "content": "What is the difference between LangChain and LlamaIndex?",
+        },
     ],
     temperature=0,
     max_tokens=500,
